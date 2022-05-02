@@ -1,10 +1,14 @@
 terraform {
   required_providers {
-    rancher2 = {
-      source = "rancher/rancher2"
-      version = "1.22.2"
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "3.4.0"
     }
   }
+}
+
+provider "azurerm" {
+   features {}
 }
 
 data "azurerm_kubernetes_cluster" "credentials" {
